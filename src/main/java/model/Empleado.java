@@ -1,5 +1,7 @@
 package model;
 
+import Exceptions.DatosNoCorrectosException;
+
 /**
 * Clase empleado para
  */
@@ -15,10 +17,14 @@ public class Empleado extends Persona {
      * @param nombre El nombre del empleado.
      * @param sexo El sexo del empleado.
      */
+
     public Empleado(String dni, String nombre, char sexo) {
         super(dni, nombre, sexo);
         this.categoria = 1;
         this.anyos = 0;
+    }
+
+    public Empleado() {
     }
 
     /**
@@ -48,6 +54,7 @@ public class Empleado extends Persona {
         }
     }
 
+
     /**
      * Establece la categoría del empleado.
      * Lanza una excepción si la categoría no es válida.
@@ -72,6 +79,10 @@ public class Empleado extends Persona {
         return categoria;
     }
 
+    public int getAnyos() {
+        return anyos;
+    }
+
     /**
      * Incrementa en 1 el número de años de servicio del empleado.
      */
@@ -87,4 +98,24 @@ public class Empleado extends Persona {
         System.out.println("Nombre: " + nombre + " DNI: " + dni + " Sexo: " + sexo +
                 " Categoria: " + categoria + " Años: " + anyos);
     }
+
+    public void setNombre(String nombre) {
+        nombre=this.nombre;
+    }
+
+    public void setSexo(String sexo) {
+        sexo= String.valueOf(this.sexo);
+    }
+
+    public void setAnyos(int anyos) {
+        this.anyos = anyos;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
 }

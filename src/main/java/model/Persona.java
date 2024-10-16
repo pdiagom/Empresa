@@ -24,6 +24,17 @@ public class Persona {
         this.dni = dni;
     }
 
+    public String getDni() {
+        return dni;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+
+    public char getSexo() {
+        return sexo;
+    }
+
     /**
      * Imprime el nombre y el DNI de la persona en la consola.
      */
@@ -56,4 +67,8 @@ public class Persona {
         this.nombre = nombre;
         this.sexo = sexo;
     }
+
+    public Persona() {
+    }
+
 }
