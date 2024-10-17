@@ -24,7 +24,7 @@ public class NominaDAO {
         }
         return false;
     }
-    // Método para obtener el sueldo de un empleado
+    // Metodo para obtener el sueldo de un empleado
     public double obtenerSueldo(String dni) throws SQLException {
         double sueldo = 0.0;
         String sql = "SELECT sueldo FROM nominas WHERE dni = ?";
@@ -47,7 +47,7 @@ public class NominaDAO {
         return sueldo;
     }
 
-    // Método para obtener conexión a la base de datos
+    // Metodo para obtener conexión a la base de datos
     private Connection obtenerConexion() throws SQLException {
         return Conexion.getConnection();
     }

@@ -33,5 +33,6 @@
   </table>
   <input type="submit" value="Guardar">
  </form>
+ <a href="../index.jsp">Volver al Menú</a>
 </body>
 </html>

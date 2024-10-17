@@ -21,7 +21,16 @@ public class NominaController extends HttpServlet {
         if ("buscarSueldo".equals(opcion)) {
             RequestDispatcher dispatcher = request.getRequestDispatcher("/views/buscarSueldo.jsp");
             dispatcher.forward(request, response);
-        } else if ("consultarSueldo".equals(opcion)) {
+        } else {
+            response.sendRedirect("../index.jsp"); // Redirige si la opción es inválida
+        }
+    }
+
+    // Maneja las solicitudes POST
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String opcion = request.getParameter("opcion");
+
+        if ("consultarSueldo".equals(opcion)) {
             String dni = request.getParameter("dni");
 
             if (dni != null && !dni.isEmpty()) {
