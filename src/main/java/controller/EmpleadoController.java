@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Servlet implementation class ProductoController
+ * Servlet implementation class EmpleadoController
  */
 @WebServlet(description = "Administra peticiones para la tabla empleados", urlPatterns = {"/empleados"})
 public class EmpleadoController extends HttpServlet {
@@ -52,7 +52,7 @@ public class EmpleadoController extends HttpServlet {
             try {
                 lista = empleadoDao.obtenerEmpleados();
                 for (Empleado empleado : lista) {
-                    System.out.println(empleado);
+                    empleado.imprime();
                 }
                 request.setAttribute("lista", lista);
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/listar.jsp");
@@ -106,15 +106,16 @@ public class EmpleadoController extends HttpServlet {
             throws ServletException, IOException {
         // TODO Auto-generated method stub
         String opcion = request.getParameter("opcion");
-        Date fechaActual = new Date();
 
         if (opcion.equals("guardar")) {
             EmpleadoDAO empleadoDAO = new EmpleadoDAO();
             Empleado empleado = new Empleado();
+            empleado.setDni(request.getParameter("dni"));
             empleado.setNombre(request.getParameter("nombre"));
             empleado.setSexo(request.getParameter("sexo"));
             empleado.setCategoria(Integer.parseInt(request.getParameter("categoria")));
             empleado.setAnyos(Integer.parseInt(request.getParameter("anyos")));
+            empleado.imprime();
             try {
                 empleadoDAO.guardar(empleado);
                 System.out.println("Registro guardado satisfactoriamente...");

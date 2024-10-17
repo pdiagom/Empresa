@@ -12,6 +12,11 @@
   <input type="hidden" name="opcion" value="guardar">
   <table border="1">
    <tr>
+    <td>DNI:</td>
+    <td><input type="text" name="dni" size="9"></td>
+   </tr>
+   <tr>
+   <tr>
     <td>Nombre:</td>
     <td><input type="text" name="nombre" size="50"></td>
    </tr>

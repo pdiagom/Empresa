@@ -13,7 +13,7 @@ public class Persona {
     public String dni;
 
     public String nombre;
-    public char sexo;
+    public String sexo;
 
     /**
      * Establece el DNI de la persona.
@@ -31,8 +31,16 @@ public class Persona {
         return nombre;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
     }
 
     /**
@@ -50,7 +58,7 @@ public class Persona {
      * @param nombre El nombre de la persona.
      * @param sexo El sexo de la persona ('M' para masculino, 'F' para femenino).
      */
-    public Persona(String dni, String nombre, char sexo) {
+    public Persona(String dni, String nombre, String sexo) {
         this.dni = dni;
         this.nombre = nombre;
         this.sexo = sexo;
@@ -63,7 +71,7 @@ public class Persona {
      * @param nombre El nombre de la persona.
      * @param sexo El sexo de la persona ('M' para masculino, 'F' para femenino).
      */
-    public Persona(String nombre, char sexo) {
+    public Persona(String nombre, String sexo) {
         this.nombre = nombre;
         this.sexo = sexo;
     }

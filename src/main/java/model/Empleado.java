@@ -18,7 +18,7 @@ public class Empleado extends Persona {
      * @param sexo El sexo del empleado.
      */
 
-    public Empleado(String dni, String nombre, char sexo) {
+    public Empleado(String dni, String nombre, String sexo) {
         super(dni, nombre, sexo);
         this.categoria = 1;
         this.anyos = 0;
@@ -39,7 +39,7 @@ public class Empleado extends Persona {
      * @param anyos Los años de servicio del empleado (debe ser 0 o mayor).
      * @throws DatosNoCorrectosException Si la categoría o los años no son válidos.
      */
-    public Empleado(String dni, String nombre, char sexo, int categoria, int anyos)
+    public Empleado(String dni, String nombre, String sexo, int categoria, int anyos)
             throws DatosNoCorrectosException {
         super(dni, nombre, sexo);
         if (categoria < 1 || categoria > 10) {
@@ -99,13 +99,6 @@ public class Empleado extends Persona {
                 " Categoria: " + categoria + " Años: " + anyos);
     }
 
-    public void setNombre(String nombre) {
-        nombre=this.nombre;
-    }
-
-    public void setSexo(String sexo) {
-        sexo= String.valueOf(this.sexo);
-    }
 
     public void setAnyos(int anyos) {
         this.anyos = anyos;
@@ -114,7 +107,7 @@ public class Empleado extends Persona {
         return nombre;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 

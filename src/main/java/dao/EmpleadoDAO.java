@@ -27,7 +27,7 @@ public class EmpleadoDAO {
 
             statement.setString(1, empleado.getDni());
             statement.setString(2, empleado.getNombre());
-            statement.setString(3, String.valueOf(empleado.getSexo()));
+            statement.setString(3, empleado.getSexo());
             statement.setInt(4, empleado.getCategoria());
             statement.setInt(5, empleado.getAnyos());
 
@@ -53,11 +53,11 @@ public class EmpleadoDAO {
             sql = "UPDATE empleados SET nombre=?, genero=?, categoria=?, anyos_trabajados=? WHERE dni=?";
             statement = connection.prepareStatement(sql);
 
-            statement.setString(1, empleado.getDni());
-            statement.setString(2, empleado.getNombre());
-            statement.setString(3, String.valueOf(empleado.getSexo()));
-            statement.setInt(4, empleado.getCategoria());
-            statement.setInt(5, empleado.getAnyos());
+            statement.setString(1, empleado.getNombre());
+            statement.setString(2, empleado.getSexo());
+            statement.setInt(3, empleado.getCategoria());
+            statement.setInt(4, empleado.getAnyos());
+            statement.setString(5, empleado.getDni());
 
             estadoOperacion = statement.executeUpdate() > 0;
 
@@ -108,11 +108,10 @@ public class EmpleadoDAO {
             while (resultSet.next()) {
                 Empleado empleado = new Empleado();
                 empleado.setDni(resultSet.getString("dni"));
-                empleado.setNombre(resultSet.getString(2));
-                empleado.setSexo(resultSet.getString(3));
+                empleado.setNombre(resultSet.getString("nombre"));
+                empleado.setSexo(resultSet.getString("genero"));
                 empleado.setCategoria(resultSet.getInt("categoria"));
                 empleado.setAnyos(resultSet.getInt("anyos_trabajados"));
-
                 listaEmpleados.add(empleado);
             }
 

@@ -15,6 +15,9 @@
     <tr>
         <td><a href="empleados?opcion=listar"> Listar Empleados</a></td>
     </tr>
+    <tr>
+        <td><a href="nominas?opcion=buscarSueldo">Buscar Sueldo de Empleado</a></td>
+    </tr>
 </table>
 </body>
 </html>
