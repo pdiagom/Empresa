@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -143,6 +142,26 @@ public class EmpleadoController extends HttpServlet {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+        } else if (opcion.equals("listarFiltro")) {
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/buscarEmpleados.jsp");
+            requestDispatcher.forward(request, response);
+            EmpleadoDAO empleadoDao = new EmpleadoDAO();
+            List<Empleado> lista = new ArrayList<>();
+            try {
+                lista = empleadoDao.obtenerEmpleadosFiltrados(request.getParameter("criterio"),request.getParameter("direccion"));
+                for (Empleado empleado : lista) {
+                    empleado.imprime();
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispatcher2 = request.getRequestDispatcher("/views/listar.jsp");
+                requestDispatcher2.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+            System.out.println("Usted a presionado la opcion listar");
         }
 
         // doGet(request, response);
