@@ -45,7 +45,7 @@ public class EmpleadoController extends HttpServlet {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/crear.jsp");
             requestDispatcher.forward(request, response);
         } else if(opcion.equals("filtrar")) {
-            System.out.println("Usted a presionado la opcion crear");
+            System.out.println("Usted a presionado la opcion filtrar");
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/buscarEmpleados.jsp");
             requestDispatcher.forward(request, response);
         }else if (opcion.equals("listar")) {
