@@ -158,15 +158,15 @@ public class EmpleadoDAO {
 
         String sql = null;
         if(criterio.equals("dni")){
-            sql = "SELECT * FROM empleados WHERE dni=?";
+            sql = "SELECT * FROM empleados WHERE dni='"+valor+"'";
         }else if(criterio.equals("nombre")){
-            sql = "SELECT * FROM empleados WHERE nombre=?";
+            sql = "SELECT * FROM empleados WHERE nombre='"+valor+"'";
         } else if (criterio.equals("sexo")) {
-            sql = "SELECT * FROM empleados WHERE genero=?";
+            sql = "SELECT * FROM empleados WHERE genero='"+valor+"'";
         } else if (criterio.equals("categoria")) {
-            sql = "SELECT * FROM empleados WHERE categoria=?";
+            sql = "SELECT * FROM empleados WHERE categoria="+valor;
         } else if (criterio.equals("anyos_trabajados")) {
-            sql = "SELECT * FROM empleados WHERE anyos_trabajados=?";
+            sql = "SELECT * FROM empleados WHERE anyos_trabajados="+valor;
         }
         estadoOperacion = false;
         connection = obtenerConexion();

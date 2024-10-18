@@ -16,7 +16,7 @@
         <td><a href="empleados?opcion=listar"> Listar Empleados</a></td>
     </tr>
     <tr>
-        <td><a href="empleados?opcion=listarFiltro">Buscar empleados </a></td>
+        <td><a href="empleados?opcion=filtrar">Buscar empleados </a></td>
     </tr>
     <tr>
         <td><a href="nominas?opcion=buscarSueldo">Buscar Sueldo de Empleado</a></td>

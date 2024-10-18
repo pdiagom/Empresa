@@ -44,7 +44,11 @@ public class EmpleadoController extends HttpServlet {
             System.out.println("Usted a presionado la opcion crear");
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/crear.jsp");
             requestDispatcher.forward(request, response);
-        } else if (opcion.equals("listar")) {
+        } else if(opcion.equals("filtrar")) {
+            System.out.println("Usted a presionado la opcion crear");
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/buscarEmpleados.jsp");
+            requestDispatcher.forward(request, response);
+        }else if (opcion.equals("listar")) {
 
             EmpleadoDAO empleadoDao = new EmpleadoDAO();
             List<Empleado> lista = new ArrayList<>();
@@ -143,26 +147,32 @@ public class EmpleadoController extends HttpServlet {
                 e.printStackTrace();
             }
         } else if (opcion.equals("listarFiltro")) {
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/buscarEmpleados.jsp");
-            requestDispatcher.forward(request, response);
-            EmpleadoDAO empleadoDao = new EmpleadoDAO();
-            List<Empleado> lista = new ArrayList<>();
-            try {
-                lista = empleadoDao.obtenerEmpleadosFiltrados(request.getParameter("criterio"),request.getParameter("direccion"));
-                for (Empleado empleado : lista) {
-                    empleado.imprime();
+            String criterio = request.getParameter("criterio");
+            String valor = request.getParameter("valor");
+
+
+            if (criterio == null || valor == null) {
+                // Si los criterios no están presentes, mostramos el formulario de búsqueda
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/buscarEmpleados.jsp");
+                requestDispatcher.forward(request, response);
+            } else {
+                // Si ya se han ingresado criterios de búsqueda, buscamos y mostramos los resultados
+                EmpleadoDAO empleadoDao = new EmpleadoDAO();
+                List<Empleado> lista = new ArrayList<>();
+                try {
+                    lista = empleadoDao.obtenerEmpleadosFiltrados(criterio, valor);
+                    for (Empleado empleado : lista) {
+                        empleado.imprime();
+                    }
+                    request.setAttribute("lista", lista);
+                    RequestDispatcher requestDispatcher2 = request.getRequestDispatcher("/views/listar.jsp");
+                    requestDispatcher2.forward(request, response);
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
-                request.setAttribute("lista", lista);
-                RequestDispatcher requestDispatcher2 = request.getRequestDispatcher("/views/listar.jsp");
-                requestDispatcher2.forward(request, response);
-
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
             }
-
-            System.out.println("Usted a presionado la opcion listar");
         }
+
 
         // doGet(request, response);
     }

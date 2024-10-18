@@ -12,17 +12,19 @@
 </head>
 <body>
 <h2>Buscar Empleados</h2>
-<form action="listar.jsp" method="POST">
+<form action="empleados" method="POST">
+    <input type="hidden" name="opcion" value="listarFiltro">
     <label for="criterio">Buscar por:</label>
     <select name="criterio" id="criterio">
         <option value="dni">DNI</option>
         <option value="nombre">Nombre</option>
         <option value="categoria">Categoría</option>
+        <option value="sexo">Sexo</option>
         <option value="anyos_trabajados">Años Trabajados</option>
     </select><br><br>
 
     <label for="valor">Valor de búsqueda:</label>
-    <input type="text" id="valor" name="valor" required><br><br>
+    <input type="text" id="valor" name="valor" value="" required><br><br>
 
     <input type="submit" value="Buscar">
 </form>
