@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Buscar Empleados</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 </head>
 <body>
 <h2>Buscar Empleados</h2>
@@ -26,7 +27,8 @@
     <label for="valor">Valor de búsqueda:</label>
     <input type="text" id="valor" name="valor" value="" required><br><br>
 
-    <input type="submit" value="Buscar">
+    <input type="submit" value="Buscar"><br><br>
+    <a href="../index.jsp">Volver al Menú</a>
 </form>
 </body>
 </html>

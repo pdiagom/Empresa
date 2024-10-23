@@ -74,8 +74,8 @@ public class EmpleadoController extends HttpServlet {
             Empleado empleado = new Empleado();
             try {
                 empleado = empleadoDAO.obtenerEmpleado(dni);
-                System.out.println(empleado);
-                request.setAttribute("producto", empleado);
+                empleado.imprime();
+                request.setAttribute("empleado", empleado);
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/editar.jsp");
                 requestDispatcher.forward(request, response);
 
@@ -87,6 +87,7 @@ public class EmpleadoController extends HttpServlet {
         } else if (opcion.equals("eliminar")) {
             EmpleadoDAO empleadoDAO = new EmpleadoDAO();
             String dni = request.getParameter("dni");
+            System.out.println(request.getParameter("dni"));
             try {
                 empleadoDAO.eliminar(dni);
                 System.out.println("Registro eliminado satisfactoriamente...");
@@ -133,6 +134,7 @@ public class EmpleadoController extends HttpServlet {
             Empleado empleado = new Empleado();
             EmpleadoDAO empleadoDAO = new EmpleadoDAO();
 
+            empleado.setDni(request.getParameter("dni"));
             empleado.setNombre(request.getParameter("nombre"));
             empleado.setSexo(request.getParameter("sexo"));
             empleado.setCategoria(Integer.parseInt(request.getParameter("categoria")));

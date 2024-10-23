@@ -6,13 +6,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Editar Empleado</title>
+ <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 </head>
 <body>
  <h1>Editar Empleado</h1>
  <form action="empleados" method="post">
   <c:set var="empleado" value="${empleado}"></c:set>
   <input type="hidden" name="opcion" value="editar">
-  <input type="hidden" name="id" value="${empleado.dni}">
+  <input type="hidden" name="dni" value="${empleado.dni}">
   <table border="1">
    <tr>
     <td>Nombre:</td>
@@ -20,7 +21,11 @@
    </tr>
    <tr>
     <td>Sexo:</td>
-    <td><input type="text" name="sexo" size="1" value="${empleado.sexo}"></td>
+    <td>
+     <select name="sexo" id="sexo" value="${empleado.sexo}">
+      <option value="M">Masculino</option>
+      <option value="F">Femenino</option>
+     </select><br><br>
    </tr>
    <tr>
     <td>Categoria:</td>

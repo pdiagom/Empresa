@@ -76,6 +76,7 @@ public class EmpleadoDAO {
         estadoOperacion = false;
         connection = obtenerConexion();
         try {
+            System.out.println(dni);
             connection.setAutoCommit(false);
             sql = "DELETE FROM empleados WHERE dni=?";
             statement = connection.prepareStatement(sql);

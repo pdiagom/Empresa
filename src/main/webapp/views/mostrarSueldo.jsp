@@ -13,6 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mostrar Sueldo de Empleado</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 </head>
 <body>
 <h1>Resultado de la Búsqueda de Sueldo</h1>

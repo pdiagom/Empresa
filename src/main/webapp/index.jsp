@@ -5,6 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Menú de Opciones</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
 </head>
 <body>
 <h1>Menu de Opciones Empleados</h1>

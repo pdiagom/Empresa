@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Crear Empleado</title>
+ <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 </head>
 <body>
  <h1>Crear Empleado</h1>
@@ -22,7 +23,10 @@
    </tr>
    <tr>
     <td>Sexo:</td>
-    <td><input type="text" name="sexo" size="1"></td>
+    <td><select name="sexo" id="sexo">
+     <option value="M">Masculino</option>
+     <option value="F">Femenino</option>
+    </select><br><br></td>
    </tr>
    <tr>
     <td>Categoria:</td>

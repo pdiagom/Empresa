@@ -11,6 +11,7 @@
 <head>
   <meta charset="ISO-8859-1">
   <title>Buscar Sueldo de Empleado</title>
+  <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
 </head>
 <body>
 <h1>Buscar Sueldo de Empleado</h1>
