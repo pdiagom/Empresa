@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Editar Empleado</title>
- <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+ <link rel="stylesheet" type="text/css" href="../empresa/CSS/styles.css">
 </head>
 <body>
  <h1>Editar Empleado</h1>
@@ -38,6 +38,6 @@
   </table>
   <input type="submit" value="Guardar">
  </form>
- <a href="../index.jsp">Volver al Menú</a>
+ <a href="../empresa/index.jsp">Volver al Menú</a>
 </body>
 </html>

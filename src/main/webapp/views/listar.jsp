@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Listar Productos</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../empresa/CSS/styles.css">
 </head>
 <body>
  <h1>Listar Productos</h1>
@@ -40,6 +40,6 @@
   </tr>
   </c:forEach>
  </table>
- <a href="../index.jsp">Volver al Menú</a>
+ <a href="../empresa/index.jsp">Volver al Menú</a>
 </body>
 </html>

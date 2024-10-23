@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Buscar Empleados</title>
-    <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="../empresa/CSS/styles.css">
 </head>
 <body>
 <h2>Buscar Empleados</h2>
@@ -27,8 +27,13 @@
     <label for="valor">Valor de búsqueda:</label>
     <input type="text" id="valor" name="valor" value="" required><br><br>
 
+<%--    <select id="sexo" name="valor">--%>
+<%--        <option value="M">Masculino</option>--%>
+<%--        <option value="femenino">Femenino</option>--%>
+<%--    </select><br><br>--%>
+
     <input type="submit" value="Buscar"><br><br>
-    <a href="../index.jsp">Volver al Menú</a>
+    <a href="../empresa/index.jsp">Volver al Menú</a>
 </form>
 </body>
 </html>

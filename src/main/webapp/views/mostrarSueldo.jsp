@@ -13,7 +13,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Mostrar Sueldo de Empleado</title>
-  <link rel="stylesheet" type="text/css" href="../CSS/styles.css">
+  <link rel="stylesheet" type="text/css" href="../empresa/CSS/styles.css">
 </head>
 <body>
 <h1>Resultado de la Búsqueda de Sueldo</h1>
@@ -32,6 +32,6 @@
 
 <a href="nominas?opcion=buscarSueldo">Buscar otro sueldo</a>
 <br>
-<a href="../index.jsp">Volver al Menú</a>
+<a href="../empresa/index.jsp">Volver al Menú</a>
 </body>
 </html>

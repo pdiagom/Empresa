@@ -21,21 +21,25 @@ public class EmpleadoDAO {
         connection = obtenerConexion();
 
         try {
-            connection.setAutoCommit(false);
-            sql = "INSERT INTO empleados (dni, nombre, genero, categoria, anyos_trabajados) VALUES(?,?,?,?,?)";
-            statement = connection.prepareStatement(sql);
+            if(empleado==obtenerEmpleado(empleado.getDni())){
 
-            statement.setString(1, empleado.getDni());
-            statement.setString(2, empleado.getNombre());
-            statement.setString(3, empleado.getSexo());
-            statement.setInt(4, empleado.getCategoria());
-            statement.setInt(5, empleado.getAnyos());
+            }else {
+                connection.setAutoCommit(false);
+                sql = "INSERT INTO empleados (dni, nombre, genero, categoria, anyos_trabajados) VALUES(?,?,?,?,?)";
+                statement = connection.prepareStatement(sql);
 
-            estadoOperacion = statement.executeUpdate() > 0;
+                statement.setString(1, empleado.getDni());
+                statement.setString(2, empleado.getNombre());
+                statement.setString(3, empleado.getSexo());
+                statement.setInt(4, empleado.getCategoria());
+                statement.setInt(5, empleado.getAnyos());
 
-            connection.commit();
-            statement.close();
-            connection.close();
+                estadoOperacion = statement.executeUpdate() > 0;
+
+                connection.commit();
+                statement.close();
+                connection.close();
+            }
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
