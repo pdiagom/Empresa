@@ -117,8 +117,16 @@ public class EmpleadoController extends HttpServlet {
             empleado.setDni(request.getParameter("dni"));
             empleado.setNombre(request.getParameter("nombre"));
             empleado.setSexo(request.getParameter("sexo"));
-            empleado.setCategoria(Integer.parseInt(request.getParameter("categoria")));
-            empleado.setAnyos(Integer.parseInt(request.getParameter("anyos")));
+            if(request.getParameter("categoria").isEmpty()){
+                empleado.setCategoria(1);
+            }else {
+                empleado.setCategoria(Integer.parseInt(request.getParameter("categoria")));
+            }
+            if(request.getParameter("anyos").isEmpty()){
+                empleado.setAnyos(0);
+            }else {
+                empleado.setAnyos(Integer.parseInt(request.getParameter("anyos")));
+            }
             empleado.imprime();
             try {
                 empleadoDAO.guardar(empleado);

@@ -14,23 +14,23 @@
   <table border="1">
    <tr>
     <td>DNI:</td>
-    <td><input type="text" name="dni" size="9"></td>
+    <td><input type="text" name="dni" size="9" required></td>
    </tr>
    <tr>
    <tr>
     <td>Nombre:</td>
-    <td><input type="text" name="nombre" size="50"></td>
+    <td><input type="text" name="nombre" size="50" required></td>
    </tr>
    <tr>
     <td>Sexo:</td>
-    <td><select name="sexo" id="sexo">
+    <td><select name="sexo" id="sexo" required>
      <option value="M">Masculino</option>
      <option value="F">Femenino</option>
     </select><br><br></td>
    </tr>
    <tr>
     <td>Categoria:</td>
-    <td><input type="text" name="categoria" size="50"></td>
+    <td><input type="text" name="categoria" size="50" ></td>
    </tr>
    <tr>
     <td>Años trabajados:</td>
@@ -38,7 +38,7 @@
    </tr>
   </table>
   <input type="submit" value="Guardar">
+  <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
  </form>
- <a href="../empresa/index.jsp">Volver al Menú</a>
 </body>
 </html>

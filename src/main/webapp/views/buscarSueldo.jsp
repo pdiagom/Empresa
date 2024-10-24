@@ -20,7 +20,8 @@
   <label for="dni">Ingrese el DNI del empleado:</label>
   <input type="text" id="dni" name="dni" required>
   <button type="submit">Buscar Sueldo</button>
+  <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
 </form>
-<a href="../empresa/index.jsp">Volver al Menú</a>
+
 </body>
 </html>

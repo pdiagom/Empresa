@@ -32,8 +32,9 @@
 <%--        <option value="femenino">Femenino</option>--%>
 <%--    </select><br><br>--%>
 
-    <input type="submit" value="Buscar"><br><br>
-    <a href="../empresa/index.jsp">Volver al Menú</a>
+    <input type="submit" value="Buscar">
+    <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
 </form>
+
 </body>
 </html>

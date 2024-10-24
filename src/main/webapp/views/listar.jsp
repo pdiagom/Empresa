@@ -8,7 +8,10 @@
     <link rel="stylesheet" type="text/css" href="../empresa/CSS/styles.css">
 </head>
 <body>
- <h1>Listar Productos</h1>
+<c:if test="${empty lista}">
+    <p class="error vacio">No se encontraron empleados durante la busqueda</p>
+</c:if>
+ <h1>Listar Empleados</h1>
  <table border="1">
   <tr>
    <td>DNI</td>
@@ -40,6 +43,6 @@
   </tr>
   </c:forEach>
  </table>
- <a href="../empresa/index.jsp">Volver al Menú</a>
+ <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
 </body>
 </html>

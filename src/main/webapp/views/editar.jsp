@@ -37,7 +37,8 @@
    </tr>
   </table>
   <input type="submit" value="Guardar">
+  <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
  </form>
- <a href="../empresa/index.jsp">Volver al Menú</a>
+
 </body>
 </html>
