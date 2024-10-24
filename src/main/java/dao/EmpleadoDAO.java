@@ -43,6 +43,7 @@ public class EmpleadoDAO {
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
+            throw e;
         }
 
         return estadoOperacion;
@@ -71,6 +72,7 @@ public class EmpleadoDAO {
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
+            throw e;
         }
 
         return estadoOperacion;
@@ -94,6 +96,7 @@ public class EmpleadoDAO {
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
+            throw e;
         }
 
         return estadoOperacion;
@@ -122,6 +125,7 @@ public class EmpleadoDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
 
         return listaEmpleados;
@@ -152,6 +156,7 @@ public class EmpleadoDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
 
         return empleado;
@@ -191,6 +196,7 @@ public class EmpleadoDAO {
 
         } catch (SQLException e) {
             e.printStackTrace();
+            throw e;
         }
 
         return listaEmpleados;

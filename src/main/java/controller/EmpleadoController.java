@@ -62,7 +62,9 @@ public class EmpleadoController extends HttpServlet {
                 requestDispatcher.forward(request, response);
 
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/error.jsp");
+                request.setAttribute("errorMessage","Fallo en la base de datos");
+                requestDispatcher.forward(request, response);
                 e.printStackTrace();
             }
 
@@ -80,7 +82,9 @@ public class EmpleadoController extends HttpServlet {
                 requestDispatcher.forward(request, response);
 
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/error.jsp");
+                request.setAttribute("errorMessage", "Fallo en la base de datos");
+                requestDispatcher.forward(request, response);
                 e.printStackTrace();
             }
 
@@ -94,7 +98,9 @@ public class EmpleadoController extends HttpServlet {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
                 requestDispatcher.forward(request, response);
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/error.jsp");
+                request.setAttribute("errorMessage", "Fallo en la base de datos");
+                requestDispatcher.forward(request, response);
                 e.printStackTrace();
             }
 
@@ -135,7 +141,9 @@ public class EmpleadoController extends HttpServlet {
                 requestDispatcher.forward(request, response);
 
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/error.jsp");
+                request.setAttribute("errorMessage", "Fallo en la base de datos");
+                requestDispatcher.forward(request, response);
                 e.printStackTrace();
             }
         } else if (opcion.equals("editar")) {
@@ -162,7 +170,9 @@ public class EmpleadoController extends HttpServlet {
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("/index.jsp");
                 requestDispatcher.forward(request, response);
             } catch (SQLException e) {
-                // TODO Auto-generated catch block
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/error.jsp");
+                request.setAttribute("errorMessage", "Fallo en la base de datos");
+                requestDispatcher.forward(request, response);
                 e.printStackTrace();
             }
         } else if (opcion.equals("listarFiltro")) {
@@ -187,6 +197,9 @@ public class EmpleadoController extends HttpServlet {
                     RequestDispatcher requestDispatcher2 = request.getRequestDispatcher("/views/listar.jsp");
                     requestDispatcher2.forward(request, response);
                 } catch (SQLException e) {
+                    RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/error.jsp");
+                    request.setAttribute("errorMessage", "Fallo en la base de datos");
+                    requestDispatcher.forward(request, response);
                     e.printStackTrace();
                 }
             }

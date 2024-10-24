@@ -13,8 +13,12 @@
  <form action="empleados" method="post">
   <c:set var="empleado" value="${empleado}"></c:set>
   <input type="hidden" name="opcion" value="editar">
-  <input type="hidden" name="dni" value="${empleado.dni}">
+
   <table border="1">
+   <tr>
+    <td>DNI</td>
+    <td><input type="text" name="dni" value="${empleado.dni}" readonly></td>
+   </tr>
    <tr>
     <td>Nombre:</td>
     <td><input type="text" name="nombre" size="50" value="${empleado.nombre}" required></td>

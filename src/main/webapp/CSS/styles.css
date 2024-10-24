@@ -178,3 +178,11 @@ a.volver:hover{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.paginaError{
+    text-align: center;
+    margin-bottom: 20px;
+}
+a.paginaError{
+    margin-left: 45%;
+}
