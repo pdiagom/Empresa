@@ -35,6 +35,5 @@
     <input type="submit" value="Buscar">
     <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
 </form>
-
 </body>
 </html>

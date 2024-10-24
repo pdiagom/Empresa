@@ -17,7 +17,7 @@
   <table border="1">
    <tr>
     <td>Nombre:</td>
-    <td><input type="text" name="nombre" size="50" value="${empleado.nombre}"></td>
+    <td><input type="text" name="nombre" size="50" value="${empleado.nombre}" required></td>
    </tr>
    <tr>
     <td>Sexo:</td>
