@@ -25,11 +25,12 @@
   <tr>
     <td>
 
-
-     <a href="empleados?opcion=meditar&dni=<c:out value="${empleado.dni}"></c:out>">
-      <c:out value='${empleado.dni}'></c:out>
-     </a>
-
+        <div class="tooltip">
+            <a href="empleados?opcion=meditar&dni=<c:out value="${empleado.dni}"></c:out>">
+                <c:out value='${empleado.dni}' ></c:out>
+            </a>
+            <span class="tooltiptext">Pincha para editar</span>
+        </div>
     </td>
     <td><c:out value="${empleado.nombre}"></c:out></td>
     <td><c:out value="${empleado.sexo}"></c:out></td>
