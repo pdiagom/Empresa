@@ -26,9 +26,7 @@
     <td>
 
         <div class="tooltip">
-            <a href="empleados?opcion=meditar&dni=<c:out value="${empleado.dni}"></c:out>">
-                <c:out value='${empleado.dni}' ></c:out>
-            </a>
+            <a href="empresa?modulo=empleados&opcion=meditar&dni=<c:out value="${empleado.dni}"></c:out>"><c:out value="${empleado.dni}"></c:out></a>
             <span class="tooltiptext">Pincha para editar</span>
         </div>
     </td>
@@ -37,9 +35,7 @@
     <td><c:out value="${empleado.categoria}"></c:out></td>
     <td><c:out value="${empleado.anyos}"></c:out></td>
     <td>
-     <a href="empleados?opcion=eliminar&dni=<c:out value="${empleado.dni}"></c:out>">
-      Eliminar
-     </a>
+        <a href="empresa?modulo=empleados&opcion=eliminar&dni=<c:out value="${empleado.dni}"></c:out>">Eliminar</a>
     </td>
   </tr>
   </c:forEach>

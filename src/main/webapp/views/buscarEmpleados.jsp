@@ -55,7 +55,8 @@
 </head>
 <body>
 <h2>Buscar Empleados</h2>
-<form action="empleados" method="POST">
+<form action="empresa" method="POST">
+    <input type="hidden" name="modulo" value="empleados">
     <input type="hidden" name="opcion" value="listarFiltro">
     <label for="criterio">Buscar por:</label>
     <select name="criterio" id="criterio"  onchange="actualizarCampo()">

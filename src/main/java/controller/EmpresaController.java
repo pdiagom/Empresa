@@ -35,16 +35,19 @@ public class EmpresaController extends HttpServlet {
         String opcion = request.getParameter("opcion");
 
         if ("empleados".equals(modulo)) {
-            // Redirige al controlador de empleados
-            request.getRequestDispatcher("/empleados?opcion=" + opcion).forward(request, response);
+            // Redirige al controlador de empleados con la opción
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/empleados?opcion=" + opcion);
+            dispatcher.forward(request, response);
         } else if ("nominas".equals(modulo)) {
             // Redirige al controlador de nóminas
-            request.getRequestDispatcher("/nominas?opcion=" + opcion).forward(request, response);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/nominas?opcion=" + opcion);
+            dispatcher.forward(request, response);
         } else {
             // Página de error si el módulo es inválido
             request.setAttribute("errorMessage", "Módulo no válido.");
             RequestDispatcher dispatcher = request.getRequestDispatcher("/views/error.jsp");
             dispatcher.forward(request, response);
         }
+
     }
 }

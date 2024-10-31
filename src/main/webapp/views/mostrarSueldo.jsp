@@ -30,7 +30,8 @@
   </c:otherwise>
 </c:choose>
 
-<a class="volver" href="nominas?opcion=buscarSueldo">Buscar otro sueldo</a>
+<a class="volver" href="empresa?modulo=nominas&opcion=buscarSueldo">Buscar otro sueldo</a>
+
 
 <a class="volver" href="../empresa/index.jsp">Volver al Menú</a>
 </body>

@@ -9,7 +9,8 @@
 </head>
 <body>
  <h1>Crear Empleado</h1>
- <form action="empleados" method="post">
+ <form action="empresa" method="post">
+  <input type="hidden" name="modulo" value="empleados">
   <input type="hidden" name="opcion" value="guardar">
   <table border="1">
    <tr>

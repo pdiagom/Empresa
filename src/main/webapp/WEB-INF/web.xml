@@ -7,6 +7,14 @@
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
   <servlet>
+    <servlet-name>EmpresaController</servlet-name>
+    <servlet-class>controller.EmpresaController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmpresaController</servlet-name>
+    <url-pattern>/empresa</url-pattern>
+  </servlet-mapping>
+  <servlet>
     <servlet-name>EmpleadoController</servlet-name>
     <servlet-class>controller.EmpleadoController</servlet-class>
   </servlet>

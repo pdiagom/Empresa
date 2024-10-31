@@ -11,16 +11,16 @@
 <h1>Menu de Opciones Empleados</h1>
 <table border="1">
     <tr>
-        <td><a href="empleados?opcion=crear"> Crear un Empleado</a></td>
+        <td><a href="empresa?modulo=empleados&opcion=crear">Crear un Empleado</a></td>
     </tr>
     <tr>
-        <td><a href="empleados?opcion=listar"> Listar Empleados</a></td>
+        <td><a href="empresa?modulo=empleados&opcion=listar">Listar Empleados</a></td>
     </tr>
     <tr>
-        <td><a href="empleados?opcion=filtrar">Buscar empleados </a></td>
+        <td><a href="empresa?modulo=empleados&opcion=filtrar">Buscar Empleados</a></td>
     </tr>
     <tr>
-        <td><a href="nominas?opcion=buscarSueldo">Buscar Sueldo de Empleado</a></td>
+        <td><a href="empresa?modulo=nominas&opcion=buscarSueldo">Buscar Sueldo de Empleado</a></td>
     </tr>
 </table>
 </body>
